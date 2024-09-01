@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Landing Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_N_logo.svg" type="image/svg+xml"> <!-- Favicon -->
+    <link rel="stylesheet" href="style/index.css">
+    <script>
+        function checkBirthday(event) {
+            event.preventDefault();
+            const birthdayInput = document.getElementById('birthday').value;
+            const validBirthday = '1996-04-22'; // Format YYYY-MM-DD
+
+            if (birthdayInput === validBirthday) {
+                const overlay = document.querySelector('.overlay');
+                overlay.classList.add('fade-out');
+
+                // Tunggu animasi selesai (1 detik) sebelum redirect
+                setTimeout(() => {
+                    window.location.href = 'account.html'; // Redirect to account.html
+                }, 1000);
+            } else {
+                // Redirect to Netflix if the date of birth is invalid
+                window.location.href = 'https://www.netflix.com/id/';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="name-overlay">
+        <p>@eean.js</p>
+    </div>
+    <div class="overlay">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo">
+        </div>
+        <div class="content">
+            <h1>Unlimited memories, celebrations, and joy.</h1>
+            <p>Celebrate anywhere. Memories forever. Ready to watch? Enter your date of birth to continue.</p>
+            <form class="email-form" onsubmit="checkBirthday(event)">
+                <input type="date" id="birthday" placeholder="Date of Birth" required>
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+        <div class="footer">
+            <p>Questions? Call <a href="https://wa.me/+6281385868453">+62 813 8586 8453</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

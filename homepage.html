@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Homepage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/homepage.css">
+</head>
+
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="logo">
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>TV Shows</li>
+                <li>Movies</li>
+                <li>News </li>
+                <li>My List</li>
+            </ul>
+        </nav>
+        <img src="assets/yj.jpg" alt="Profile Picture" class="profile-pic">
+    </header>
+
+    <div class="hero-container">
+        <div class="hero hero-page" id="page1">
+            <video id="heroVideo1" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
+            <div class="hero-content">
+                <h1>Season 1</h1>
+                <p>bpk lu so iye</p>
+                <div class="hero-buttons">
+                    <button id="more-info">
+                        <i class="fa fa-info-circle"></i> More Info
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hero hero-page" id="page2" style="display: none;">
+            <!-- Konten halaman kedua hero -->
+            <video id="heroVideo2" src="https://www.w3schools.com/html/mov_bbb.mp4" muted loop></video>
+            <div class="hero-content">
+                <h1>Season 2</h1>
+                <p>pala lu gede</p>
+                <div class="hero-buttons">
+                    <button id="more-info">
+                        <i class="fa fa-info-circle"></i> More Info
+                    </button>
+                </div>
+            </div>
+        </div>
+        <button class="nav-button left" id="prevButton">&#10094;</button>
+        <button class="nav-button right" id="nextButton">&#10095;</button>
+
+        <div class="page-indicators">
+            <span class="indicator" data-page="0"></span>
+            <span class="indicator" data-page="1"></span>
+        </div>
+    </div>
+    
+
+    <div class="movies">
+        <h2 class="section-title">Top Pick</h2>
+        <div class="movies-row">
+            <div class="movie">
+                <a href="assets/video 1.mp4" target="_blank">
+                    <img src="assets/thumbnail 1.jpeg" alt="Movie 1">
+                </a>
+            </div>
+            <div class="movie">
+                <a href="assets/video 2.mp4" target="_blank">
+                    <img src="assets/thumbnail 2.jpeg" alt="Movie 2">
+                </a>
+            </div>
+            <div class="movie">
+                <a href="assets/video 3.mp4" target="_blank">
+                    <img src="assets/thumbnail 3.jpeg" alt="Movie 3">
+                </a>
+            </div>
+            <div class="movie">
+                <a href="assets/video 4.mp4" target="_blank">
+                    <img src="assets/thumbnail 4.jpeg" alt="Movie 4">
+                </a>
+            </div>
+            <div class="movie">
+                <a href="assets/video 5.mp4" target="_blank">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 5">
+                </a>
+            </div>
+            <div class="movie">
+                <a href="assets/video6.mp4" target="_blank">
+                    <img src="https://via.placeholder.com/200x300" alt="Movie 6">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="https://wa.me/+6281385868453">Contact Me</a></li>
+        </ul>
+        <p>
+            <a href="https://www.instagram.com/eean.js?igsh=MTg0NjVvbzNybGxyeg==" target="_blank" class="no-style">@eean.js</a> - All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- Modal 1 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Season 1</h2>
+            <img src="assets/S1.jpg" alt="Movie Image">
+            <p class="genre">Genre: Documentary, Personal, Celebration, Drama, Comedy</p>
+            <p>welcome to Season 1 </p>
+            <div class="start-episode">
+                <h2>Start Exploring</h2>
+                <div class="episode-thumbnail" id="episode1">
+                    <img src="assets/S1E1.jpg" alt="Episode 1 Thumbnail">
+                    <div class="episode-info">
+                        <p class="episode-title">S1 E1: Emang iye</p>
+                        <p class="episode-description">
+                            Dalam episode pertama ini, penonton akan diperkenalkan pada kisah persiapan yang penuh kejutan. Teman-teman dan keluarga mulai merencanakan hadiah istimewa untuk seseorang yang spesial.
+                            <span class="more-text"> Dari momen-momen awal hingga rencana rahasia yang mulai terbentuk, episode ini mengungkapkan bagaimana semuanya dimulai.</span>
+                            <a href="#" class="read-more" onclick="toggleText('episode1')">Read more</a>
+                        </p>
+                        <a href="https://eangg1.github.io/cake/" class="button" target="_blank">Explore Episode 1</a>
+                    </div>
+                </div>
+                
+                <div class="episode-thumbnail" id="episode2">
+                    <img src="assets/S1E2.jpg" alt="Episode 2 Thumbnail">
+                    <div class="episode-info">
+                        <p class="episode-title">S1 E2: Iye kali ye</p>
+                        <p class="episode-description">
+                            Episode kedua membawa penonton ke dalam proses pembuatan video pesan dari orang-orang terdekat. Dengan latar belakang yang emosional, setiap pesan video direkam dengan penuh kasih sayang dan kenangan manis.
+                            <span class="more-text"> Episode ini menggambarkan betapa berharganya hubungan dan arti sebuah ucapan ulang tahun yang tulus.</span>
+                            <a href="#" class="read-more" onclick="toggleText('episode2')">Read more</a>
+                        </p>
+                        <a href="https://eangg1.github.io/kue/" class="button" target="_blank">Explore Episode 2</a>
+                    </div>
+                </div>
+                
+                <div class="episode-thumbnail" id="episode3">
+                    <img src="assets/S1E3.jpg" alt="Episode 3 Thumbnail">
+                    <div class="episode-info">
+                        <p class="episode-title">S1 E3: Walawe</p>
+                        <p class="episode-description">
+                            Pada episode terakhir, saat yang paling ditunggu-tunggu tiba. Orang yang spesial ini akhirnya dihadapkan dengan hadiah spesial – sebuah web kloning Netflix yang diisi dengan semua pesan dan momen berharga.
+                            <span class="more-text"> Dari reaksi mereka hingga akhir yang mengharukan, episode ini adalah puncak dari semua usaha dan cinta yang telah dicurahkan untuk merayakan hari spesialnya.</span>
+                            <a href="#" class="read-more" onclick="toggleText('episode3')">Read more</a>
+                        </p>
+                        <a href="https://eangg1.github.io/wishes/" class="button" target="_blank">Explore Episode 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for Hero Page 2 -->
+    <div id="myModalPage2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Season 2</h2>
+            <img src="assets/S2.jpg" alt="Movie Image">
+            <p class="genre">Genre: Documentary, Personal, Celebration, Drama, Comedy</p> <!-- New Genre Section -->
+            <p>welcome to s2</p>
+            <div class="start-episode">
+                <h2>Start Watching</h2>
+                <div class="episode-thumbnail" id="episode4" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+                    <img src="assets/S2E1.jpg" alt="Episode 3 Thumbnail">
+                    <div class="episode-info">
+                        <p class="episode-title">S2 E1: Isapkan Dulu lee</p>
+                        <p class="episode-description">
+                            Season 2 dimulai dengan perasaan nostalgia namun dipenuhi dengan harapan baru. Setelah menerima hadiah spesial sebelumnya, hubungan dengan teman-teman dan keluarga semakin erat. 
+                            <span class="more-text"> Episode ini mengeksplorasi bagaimana kenangan dari season pertama telah mempengaruhi kehidupan sehari-hari dan mempersiapkan mereka untuk kejutan-kejutan berikutnya.</span>
+                            <a href="#" class="read-more" onclick="toggleText('episode4')">Read more</a>
+                        </p>
+                    <a href="https://eangg1.github.io/cake/" class="button" target="_blank ">Watch Episode 1</a>
+                    </div>
+                </div>
+                <div class="episode-thumbnail" id="episode5" data-video-src="https://www.w3schools.com/html/mov_bbb.mp4">
+                    <img src="assets/S2E2.jpg" alt="Episode 4 Thumbnail">
+                    <div class="episode-info">
+                        <p class="episode-title">S2 E2: Keselek motor</p>
+                        <p class="episode-description">
+                            Di episode penutup ini, penonton akan diajak melihat momen-momen tersembunyi yang belum pernah ditampilkan sebelumnya. Dengan kilasan balik ke kejadian-kejadian yang tidak terlihat di season pertama, episode ini memberikan pandangan mendalam tentang apa yang terjadi di balik layar. 
+                            <span class="more-text"> Semua rahasia kecil dan momen emosional kini diungkap, menjadikan akhir dari season ini begitu istimewa dan tak terlupakan.</span>
+                            <a href="#" class="read-more" onclick="toggleText('episode5')">Read More</a>
+                        </p>
+                        <a href="https://eangg1.github.io/cake/" class="button" target="_blank" >Watch Episode 2</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="name-overlay">
+        <p>@eean.js</p>
+    </div>
+    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var episodeThumbnails = document.querySelectorAll('.episode-thumbnail');
+            var video = document.getElementById('heroVideo');
+    
+            episodeThumbnails.forEach(function(thumbnail) {
+                thumbnail.addEventListener('click', function () {
+                    var videoSrc = thumbnail.getAttribute('data-video-src');
+                    video.src = videoSrc;
+    
+                    // Play video
+                    video.play();
+    
+                    // Request full screen
+                    if (video.requestFullscreen) {
+                        video.requestFullscreen();
+                    } else if (video.mozRequestFullScreen) { /* Firefox */
+                        video.mozRequestFullScreen();
+                    } else if (video.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                        video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { /* IE/Edge */
+                        video.msRequestFullscreen();
+                    }
+    
+                    // Hide modal
+                    document.getElementById('myModal').style.display = 'none';
+                });
+            });
+        });
+    
+        document.addEventListener("DOMContentLoaded", function() {
+    const heroPages = document.querySelectorAll(".hero-page");
+    const modals = {
+        page1: document.getElementById("myModal"),
+        page2: document.getElementById("myModalPage2")
+    };
+    const prevButton = document.getElementById("prevButton");
+    const nextButton = document.getElementById("nextButton");
+    let currentPageIndex = 0;
+
+    // Fungsi untuk menampilkan halaman hero berdasarkan indeks
+    function showPage(index) {
+        heroPages.forEach((page, i) => {
+            page.style.display = i === index ? "block" : "none";
+        });
+    }
+
+    // Event listener untuk tombol "Next" dan "Previous"
+    nextButton.addEventListener("click", function() {
+        currentPageIndex = (currentPageIndex + 1) % heroPages.length;
+        showPage(currentPageIndex);
+    });
+
+    prevButton.addEventListener("click", function() {
+        currentPageIndex = (currentPageIndex - 1 + heroPages.length) % heroPages.length;
+        showPage(currentPageIndex);
+    });
+
+    // Modal handling untuk setiap page
+    const moreInfoButtons = document.querySelectorAll(".hero-buttons button");
+
+    moreInfoButtons.forEach((button, index) => {
+        button.addEventListener("click", function() {
+            const modal = modals[`page${index + 1}`];
+            if (modal) {
+                modal.style.display = "block";
+            }
+        });
+    });
+
+    // Close modals
+    const closeModalButtons = document.querySelectorAll(".modal .close");
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            button.closest(".modal").style.display = "none";
+        });
+    });
+
+    // Klik di luar modal untuk menutupnya
+    window.addEventListener("click", function(event) {
+        Object.values(modals).forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+    // Awal: tampilkan halaman pertama
+    showPage(currentPageIndex);
+});
+    
+
+    function toggleText(episodeId) {
+        const episode = document.getElementById(episodeId);
+        const moreText = episode.querySelector('.more-text');
+        const readMoreLink = episode.querySelector('.read-more');
+
+        if (moreText.style.display === 'none' || moreText.style.display === '') {
+            moreText.style.display = 'inline';
+            readMoreLink.textContent = 'Read less';
+        } else {
+            moreText.style.display = 'none';
+            readMoreLink.textContent = 'Read more';
+        }
+    }
+
+    const pages = document.querySelectorAll('.hero-page');
+const indicators = document.querySelectorAll('.indicator');
+let currentPage = 0;
+let isTransitioning = false;
+
+// Menambahkan kelas 'active' ke halaman pertama agar terlihat saat pertama kali web dimuat
+pages[currentPage].classList.add('active');
+indicators[currentPage].classList.add('active');
+
+document.getElementById('nextButton').addEventListener('click', () => {
+  if (!isTransitioning) {
+    slidePage('next');
+  }
+});
+
+document.getElementById('prevButton').addEventListener('click', () => {
+  if (!isTransitioning) {
+    slidePage('prev');
+  }
+});
+
+function slidePage(direction) {
+  isTransitioning = true; // Menghindari pemicu berulang selama animasi
+
+  const current = pages[currentPage];
+  const currentIndicator = indicators[currentPage];
+  let nextPage;
+
+  if (direction === 'next') {
+    nextPage = (currentPage + 1) % pages.length;
+    current.classList.add('slide-out-left');
+    pages[nextPage].style.left = '100%';
+  } else {
+    nextPage = (currentPage - 1 + pages.length) % pages.length;
+    current.classList.add('slide-out-right');
+    pages[nextPage].style.left = '-100%';
+  }
+
+  const nextIndicator = indicators[nextPage];
+  pages[nextPage].classList.add('active');
+  nextIndicator.classList.add('active');
+
+  setTimeout(() => {
+    current.classList.remove('active', 'slide-out-left', 'slide-out-right');
+    currentIndicator.classList.remove('active');
+    pages[nextPage].style.left = '0';
+    currentPage = nextPage;
+    isTransitioning = false;
+  }, 5); // Sesuaikan dengan durasi animasi transition di CSS
+}
+    </script>
+</body>
+</html>
